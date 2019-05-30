@@ -25,7 +25,7 @@
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
-   document.getElementById("main").style.marginLeft = "50px";
+   document.getElementById("main").style.marginLeft = "70px";
 
 }
 
@@ -47,7 +47,7 @@ function closeNav() {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: white;   /*#111*/
+  background-color:##F5F5F5;   /*#111*/
   overflow-x: hidden;
   transition: 1s;/*0.5*/
   padding-top: 60px;
@@ -81,20 +81,20 @@ function closeNav() {
 }
 
 </style>
-<body>
+<body style="background-color: #F5F5F5">
 	<div class="container">
 		<!-- <table style="border: 20px;color:red"> -->
-		<div class="row" style="background-color:skyblue; width: 100%;height:150px">
-			<div class="col-md-2">
+		<div class="row" style="background-color:skyblue; width: 100%;height:100px">
+			<div class="col-md-3"style="height:150px">
 				<div class="form-group">
 					<div class="input-group">
 						<div id="main">
 						<span><i class="fa fa-bars" id="menu" style="font-size: 50px;margin-top: 100px;margin-left: 80px;cursor:pointer" onclick="openNav()"></i></span></div>
 							<!-- sidebar code -->
 				<div id="mySidenav" class="sidenav">
-				  <a data-toggle="tab"href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				  <a data-toggle="tab" href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				  <a data-toggle="tab" href="#home">HOME</a>
-				  <a data-toggle="tab" href="#halldetails"id="a">HALL DETAILS</a> 
+				  <a data-toggle="tab" href="#halldetails">HALL DETAILS</a> 
 				  <a data-toggle="tab" href="#currentstatus">CURRENT STATUS</a>
 				  <a data-toggle="tab" href="#checkforrequirement">CHECK FOR REQUIREMENT</a>
 				  <a data-toggle="tab" href="#upload">UPLOAD</a>
@@ -103,10 +103,10 @@ function closeNav() {
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-5"style="height:150px">
 				<div class="form-group">
 					<div class="input-group">
-						<p style="color:yellow;font-size: 80px;font-family:Monotype Corsiva;text-align: center;margin-top: 50px;margin-left: 50px">Book A Hall</p>
+						<p style="color:#FE993F;font-size: 80px;font-family:Monotype Corsiva;text-align: center;margin-top: 50px;margin-left: 50px">Book A Hall</p>
 					</div>
 				</div>
 			</div>
@@ -151,23 +151,21 @@ function closeNav() {
 				</div>
 			</div>
 		</div>
-			<div class="row" style="height: 500px;width:100%;"><!--background-image:url('adityadip1.jpg') -->
+
+			<div class="row" style="height: 500px;width:100%;">
 				<div class="tab-content">
 					<div class="tab-pane fade in active"id="home">
 						<img src="adityadip1.jpg" height="500px"width="100%"id="b">
 						
 					</div>
-				<!-- <div class="col-md-3">
-				</div>
-				<div class="col-md-6"> -->
-					<div class="tab-pane fade"id="halldetails">
+				
+					<div class="tab-pane fade col-md-6 col-md-offset-3"id="halldetails">
 						<center>
 				          <form>
-				          	<h1 style="color:solid black;text-align: center;"><b>Hall Details</b></h1><br><br>
+				          	<h1>Hall Details</h1><br><br>
 				            <div class="form-group">
-				              <div class="input-group">
-								<label> College: </label>
-								<select>
+								<label class="col-md-2"> College: </label>
+								<select class="col-md-6">
 									<option>--SELECT--</option>
 									<option>Aditya Engineering college</option>
 									<option>Aditya college of Engineering and technology</option>
@@ -177,11 +175,11 @@ function closeNav() {
 									<option>B-school</option>
 								</select><br><br>  
 				              </div>
-				            </div>  
+				         
 				            <div class="form-group">
-				              <div class="input-group">
-				              	<label>Bhavan:</label>
-								<select>
+				              	<label  class="col-md-2">Bhavan:</label>
+		
+								<select class="col-md-6">
 									<option>--SELECT--</option>
 									<option> Billgates Bhavan</option>
 									<option>K.L.Rao Bhavan</option>
@@ -192,36 +190,29 @@ function closeNav() {
 									<option> Abdul Kalam Bhavan </option>
 								</select><br> <br>
 				              </div>
-				            </div>
+				         
+				           
 				            <div class="form-group">
-				              <div class="input-group">
-				              	 <label>Available Seats: </label>
-							        <input type="number" class="form-control">
+				              	 <label  class="col-md-2">Available Seats: </label>
+							        <input type="number" class="col-md-6" >
 							        <br> <br>
 				              </div>
-				            </div>
+				            
 				            <div class="form-group">
-				              <div class="input-group">
-				              	<label> Dias:</label>
-								<select>
-									<option> --SELECT-- </option>
-									<option> Yes</option>
-									<option> No</option>
-								</select> <br> <br>
+				              	<label  class="col-md-2"> Dias:</label>
+				              	<input type="number" class="col-md-6"><br><br>
 				              </div>
-				            </div>
-				            <div class="form-group">
-				              <div class="input-group">
-				              	<label> Room No:</label>
-								<input type="number" class="form-control"><br> 
+				              <div class="form-group">
+				              	<label  class="col-md-2"> Room No:</label>
+								<input type="number" class="col-md-6"><br> <br>
 				              </div>
-				            </div>
-							<button class="btn btn-success">
+							<button class="btn btn-info">
 								<a href="shbookingform.html">Book Now</a>
 							</button>
 						</form>
 						</center>	
 					</div>
+			
 
 				
 					<div class="tab-pane fade"id="currentstatus">
